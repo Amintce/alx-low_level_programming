@@ -7,33 +7,26 @@
  */
 int main(void)
 {
-	int digit1, digit2, digit3;
-	int printed = 0;
+	int num0, num1, num2;
 
-	for (digit1 = 0 ; digit1 < 8 ; digit1++)
+	for (num0 = 0; num0 <= 9; num0++)
+
 	{
-		for (digit2 = digit1 ; digit2 < 9 ; digit2++)
+		for (num1 = num0 + 1; num1 <= 9; num1++)
 		{
-			for (digit3 = digit2 + 1 ; digit3 < 10 ; digit3++)
+			for (num2 = num1 + 1; num2 <= 9; num2++)
 			{
-				if (printed > 0)
+				putchar(num0 + '0');
+				putchar(num1 + '0');
+				putchar(num2 + '0');
+				if (!(num0 == 7 && num1 == 8 && num2 == 9))
 				{
-
 					putchar(',');
 					putchar(' ');
 				}
-
-				putchar((digit1 % 10) + '0');
-				putchar((digit2 % 10) + '0');
-				putchar((digit3 % 10) + '0');
-
-				printed++;
-
 			}
 		}
-
 	}
-		putchar('\n');
-
-		return (0);
+	putchar('\n');
+	return (0);
 }
