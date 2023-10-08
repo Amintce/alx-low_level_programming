@@ -8,6 +8,7 @@
 int main(void)
 {
 	int digit1, digit2, digit3;
+	int printed = 0;
 
 	for (digit1 = 0 ; digit1 < 8 ; digit1++)
 	{
@@ -15,16 +16,18 @@ int main(void)
 		{
 			for (digit3 = digit2 + 1 ; digit3 < 10 ; digit3++)
 			{
-				putchar((digit1 % 10) + '0');
-				putchar((digit2 % 10) + '0');
-				putchar((digit3 % 10) + '0');
-
-				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
+				if (printed > 0)
 				{
 
 					putchar(',');
 					putchar(' ');
 				}
+
+				putchar((digit1 % 10) + '0');
+				putchar((digit2 % 10) + '0');
+				putchar((digit3 % 10) + '0');
+
+				printed++;
 
 			}
 		}
@@ -33,5 +36,4 @@ int main(void)
 		putchar('\n');
 
 		return (0);
-
 }
