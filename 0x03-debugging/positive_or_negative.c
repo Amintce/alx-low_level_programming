@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 
+/**
+ * positive_or_negative - prints the positive result
+ * @i: prints the parameter
+ * Return: 0
+ */
+
 void positive_or_negative(int i)
 {
 	if (i > 0)
